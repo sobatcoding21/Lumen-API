@@ -16,7 +16,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/key', function () use ($router) {
-    return \Illuminate\Support\Str::random(48);
+    return \Illuminate\Support\Str::random(32);
 });
 
 $router->get('/users', 'UsersController@index' );
@@ -24,3 +24,5 @@ $router->get('/users/{id}', 'UsersController@show' );
 $router->post('/users', 'UsersController@store' );
 $router->post('/users/update', 'UsersController@update' );
 $router->delete('/users/delete/{id}', 'UsersController@destroy' );
+
+$router->post('/login', 'AuthController@login' );
