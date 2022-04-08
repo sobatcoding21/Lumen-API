@@ -71,6 +71,7 @@ $app->configure('app');
 | route or middleware that'll be assigned to some specific routes.
 |
 */
+
 $app->middleware([
     App\Http\Middleware\CorsMiddleware::class
 ]);
